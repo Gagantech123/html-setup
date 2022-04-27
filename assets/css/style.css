@@ -1,0 +1,203 @@
+@import url('fonts.css');
+@import url('header.css');
+@import url('footer.css');
+
+/* 
+================================
+	Tags 
+================================
+*/
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+li, ul{
+   list-style: none;
+}
+a, button{
+	color: inherit;
+	text-decoration: none;
+	transition: 0.3s;
+	cursor: pointer;
+}
+:hover, :focus{
+	color: inherit;
+	text-decoration: none;
+}
+img{
+	max-width: 100%;
+	margin: 0 auto;
+	object-fit: cover;
+}
+
+:hover, :focus {	
+	outline: none;
+	text-decoration: none;
+}
+
+input, select, textarea, button{
+	font-family: inherit;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	overflow-x: hidden;
+	position: relative;
+	font-size: 1.6rem;
+	font-family: 'Poppins';
+	user-select: none;
+}
+h1{
+	font-size: ;
+	list-style: 1.5;
+	margin-bottom: ;
+}
+h2{
+	font-size: ;
+	list-style: 1.5;
+	margin-bottom: ;
+}
+h3{
+	font-size: ;
+	list-style: 1.5;
+	margin-bottom: ;
+}
+h4{
+	font-size: ;
+	list-style: 1.5;
+	margin-bottom: ;
+}
+p{
+	font-size:1.6rem ;
+	line-height: 2.6rem;
+}
+
+/* 
+================================
+	Variables css
+================================
+*/
+
+:root {
+  --black: #000;
+  --white: #ffffff;
+  --blue: #1e90ff;
+  --lightgrey: #e5e4e4;
+}
+
+/*body{
+	background-color:var(--blue);
+	color: var(--white);
+}*/
+
+/* 
+================================
+	common css
+================================
+*/
+
+.container{
+	max-width: 112rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.d-flex{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.rel{
+	position: relative;
+}
+
+.ali{
+	align-items: center;
+}
+.juc{
+	justify-content: center;
+}
+
+.jusb{
+	justify-content: space-between;
+}
+
+.text-left{
+	text-align:left;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.p-0{
+	padding: 0;
+}
+
+.pt-0{
+	padding-top: 0;
+}
+
+.pl-0{
+	padding-left: 0;
+}
+
+.pr-0{
+	padding-right: 0;
+}
+
+.pb-0{
+	padding-bottom: 0;
+}
+.cta{
+	display: inline-block;
+	padding: ;
+}
+.cta_bg{
+	position: relative;
+}
+.cta_bg a{
+    position: relative;
+    padding: 1.1rem  3.5rem;
+    display: inline-block;
+    border: 1px solid var(--black);
+    border-radius: 2.5rem;
+    color: var(--black);
+    overflow: hidden;
+    z-index: 9;
+}
+.cta_bg a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--black);
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+.cta_bg a:hover:before{
+	width: 100%;	
+}
+.cta_bg a:hover{
+	color: var(--white);
+}
+.space{
+	padding: 5rem 0;
+}

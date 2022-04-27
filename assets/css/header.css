@@ -1,0 +1,147 @@
+.site_header {
+    box-shadow: 0 0 1rem #ccc;
+}
+.site_header .row{
+	min-height: 8rem;
+}
+.site_header ul a{
+	font-size: 1.4rem;
+	display: inline-block;
+	padding:1rem 1.5rem;
+	position: relative;
+}
+.site_header ul a:before{
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--black);
+	width: 0%;
+	height: 0.2rem;
+	transition: 0.3s;
+}
+.site_header ul li:hover a:before{
+	width: 100%;
+}
+.site_header ul a.active:before {
+    width: 100%;
+}
+.site_header ul li:last-child:hover a:before{
+	width: 0;
+}
+.site_header ul li {
+    margin-right: 0.5rem;
+}
+.site_header ul li:last-child{
+	margin: 0;
+}
+.site_header ul li:last-child a{
+	background: var(--black);
+	border-radius: 2rem;
+	background: var(--black);
+	color: var(--white);;
+	padding: 1rem 3rem;
+	margin-left: 1rem;
+	border: 1px solid var(--black);;
+}
+.site_header ul li:last-child a:hover{
+	background: transparent;
+	color: var(--black);;
+	box-shadow:  0 0 2px var(--black);;
+}
+.menu_toggle{
+	display: none;
+}
+.menu_toggle span{
+	display:block;
+	width: 3rem;
+	height: 0.1rem;
+	background: var(--black);
+}
+
+
+
+.menu_toggle span{
+	width: 3rem;
+    height: 2px;
+    background-color: var(--black);;
+    margin-bottom: 0.7rem;
+    display: block;
+   position:relative;
+   transition: 0.2s;
+}
+.menuactive .site-header .site-menu{
+	 transform: translateX(0);
+
+}
+.menuactive .menu_toggle span:first-child{
+	transform: rotate(45deg);
+	top:8px;
+}
+.menuactive .menu_toggle span:last-child{
+	transform: rotate(-45deg);
+    top: -10px;
+}
+.menuactive .menu_toggle span:nth-of-type(2){
+	opacity: 0;
+}
+.menuactive .site_menu{
+	transform: translateX(0);
+}
+.menuactive{
+	overflow: hidden;
+}
+	
+@media  (max-width: 1024px) {
+	.site_menu{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: var(--lightgrey);
+		color: var(--black);
+		transform: translateX(-100%);
+		margin-top: 8rem;
+		transition:0.3s ;
+	}
+	.menu_toggle{
+		display: block;
+	}
+	.site_menu ul{
+		display: block;
+		padding: 2rem 1rem;
+	}
+	.site_menu ul a {
+	    background: transparent;
+	    color: var(--black);
+	    display: block;
+	}
+	.site_menu ul a.active{
+		background: var(--black);
+		color: var(--white);
+	}
+	.site_logo{
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 99;
+	}
+	.site_header ul li:last-child a{
+		background: unset;
+		margin: 0;
+		border-radius: unset;
+		border: unset;
+		color: var(--black);
+		padding: 1rem 1.5rem;
+	}
+	.site_header ul li:last-child a:hover{
+		box-shadow: unset;
+	}
+	.site_header ul li:last-child:hover a:before{
+		width: 100%;
+	}
+
+}
